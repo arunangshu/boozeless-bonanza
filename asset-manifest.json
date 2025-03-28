@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/boozeless-bonanza/static/css/main.e6c13ad2.css",
-    "main.js": "/boozeless-bonanza/static/js/main.e6fc7375.js",
+    "main.js": "/boozeless-bonanza/static/js/main.a3a37b8d.js",
     "static/js/453.c86411ce.chunk.js": "/boozeless-bonanza/static/js/453.c86411ce.chunk.js",
     "static/media/starry-background.jpg": "/boozeless-bonanza/static/media/starry-background.560a9ca4b1e63024f924.jpg",
     "index.html": "/boozeless-bonanza/index.html",
     "main.e6c13ad2.css.map": "/boozeless-bonanza/static/css/main.e6c13ad2.css.map",
-    "main.e6fc7375.js.map": "/boozeless-bonanza/static/js/main.e6fc7375.js.map",
+    "main.a3a37b8d.js.map": "/boozeless-bonanza/static/js/main.a3a37b8d.js.map",
     "453.c86411ce.chunk.js.map": "/boozeless-bonanza/static/js/453.c86411ce.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.e6fc7375.js"
+    "static/js/main.a3a37b8d.js"
   ]
 }

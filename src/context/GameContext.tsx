@@ -215,13 +215,16 @@ export const GameProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
+        // Use the PUBLIC_URL environment variable for GitHub Pages compatibility
+        const publicUrl = process.env.PUBLIC_URL || '';
+        
         // First try to load the original questions.csv
-        let response = await fetch('/data/questions.csv');
+        let response = await fetch(`${publicUrl}/data/questions.csv`);
         
         // If it fails, fallback to our sample questions
         if (!response.ok) {
           console.warn("Could not load original questions.csv, trying sample-questions.csv");
-          response = await fetch('/data/sample-questions.csv');
+          response = await fetch(`${publicUrl}/data/sample-questions.csv`);
         }
         
         const text = await response.text();

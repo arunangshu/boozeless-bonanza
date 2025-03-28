@@ -33,14 +33,6 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${theme.fonts.main};
     background-color: ${theme.colors.background};
     color: ${theme.colors.text};
-    background-image: 
-      url('/images/starry-background.jpg'),
-      radial-gradient(circle at 50% 50%, rgba(25, 25, 112, 0.3) 0%, transparent 80%),
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 20, 0.9) 100%);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     min-height: 100vh;
     overflow-x: hidden;
   }

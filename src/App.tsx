@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { GameProvider } from './context/GameContext';
 import { GlobalStyle } from './theme';
@@ -8,8 +8,30 @@ import SpinningWheel from './components/SpinningWheel';
 import GameModes from './components/GameModes';
 import TriviaGame from './components/TriviaGame';
 import OtherGameModes from './components/OtherGameModes';
+import starryBackground from './assets/starry-background.jpg';
 
 function App() {
+  // Apply the background image to document.body to ensure it works with GitHub Pages
+  useEffect(() => {
+    document.body.style.backgroundImage = `
+      url(${starryBackground}),
+      radial-gradient(circle at 50% 50%, rgba(25, 25, 112, 0.3) 0%, transparent 80%),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 20, 0.9) 100%)
+    `;
+    document.body.style.backgroundSize = 'cover';
+    document.body.style.backgroundPosition = 'center';
+    document.body.style.backgroundRepeat = 'no-repeat';
+    document.body.style.backgroundAttachment = 'fixed';
+    
+    return () => {
+      document.body.style.backgroundImage = '';
+      document.body.style.backgroundSize = '';
+      document.body.style.backgroundPosition = '';
+      document.body.style.backgroundRepeat = '';
+      document.body.style.backgroundAttachment = '';
+    };
+  }, []);
+
   return (
     <>
       <GlobalStyle />

@@ -2,7 +2,7 @@
   "name": "boozeless-bonanza",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://YOURUSERNAME.github.io/boozeless-bonanza",
+  "homepage": "https://arunangshu.github.io/boozeless-bonanza",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",

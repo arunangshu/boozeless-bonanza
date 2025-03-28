@@ -19,6 +19,7 @@ import {
   DropdownContainer,
   DropdownButton,
   DropdownContent,
+  DropdownOverlay,
 } from './styled';
 
 const PlayerManagement: React.FC = () => {
@@ -71,8 +72,14 @@ const PlayerManagement: React.FC = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  const closeDropdown = () => {
+    setIsDropdownOpen(false);
+  };
+
   return (
     <Section>
+      <DropdownOverlay $isOpen={isDropdownOpen} onClick={closeDropdown} />
+      
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}

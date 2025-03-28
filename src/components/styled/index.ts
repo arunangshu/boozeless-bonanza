@@ -593,6 +593,19 @@ export const DropdownContainer = styled.div`
   display: inline-block;
   width: 100%;
   margin-bottom: 20px;
+  z-index: 90;
+`;
+
+export const DropdownOverlay = styled.div<{ $isOpen: boolean }>`
+  display: ${({ $isOpen }) => ($isOpen ? 'block' : 'none')};
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 80;
+  animation: ${({ $isOpen }) => $isOpen ? 'fadeIn 0.3s ease' : 'none'};
 `;
 
 export const DropdownButton = styled(Button)`

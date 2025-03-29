@@ -72,7 +72,9 @@ const SecretTaskPage: React.FC = () => {
                 fontSize: '1.2rem', 
                 fontStyle: 'italic',
                 color: '#00ffff',
-                textShadow: '0 0 10px #00ffff'
+                textShadow: '0 0 10px #00ffff',
+                fontWeight: 'bold',
+                WebkitTextStroke: '1px navy'
               }}>
                 Code: {task.id}
               </div>
@@ -94,7 +96,8 @@ const SecretTaskPage: React.FC = () => {
                 margin: '15px 0',
                 backgroundColor: 'rgba(0, 255, 255, 0.1)', 
                 borderLeft: '4px solid #00ffff',
-                borderRadius: '4px'
+                borderRadius: '4px',
+                fontFamily: "'Poppins', sans-serif"
               }}>
                 {task.description}
               </p>

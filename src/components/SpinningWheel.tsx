@@ -206,7 +206,7 @@ const SpinningWheel: React.FC = () => {
                       cx={centerX}
                       cy={centerY}
                       r={radius - 2}
-                      fill="rgba(10, 10, 30, 0.8)"
+                      fill="rgba(10, 10, 30, 0.5)"
                       stroke={theme.colors.primary}
                       strokeWidth="4"
                       filter={`drop-shadow(0 0 10px ${theme.colors.primary})`}

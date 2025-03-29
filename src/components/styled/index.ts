@@ -62,6 +62,7 @@ export const Title = styled.h1`
   letter-spacing: 3px;
   animation: ${flicker} 5s infinite;
   position: relative;
+  -webkit-text-stroke: 1px #8B4513;
   
   &::after {
     content: '';
@@ -202,7 +203,7 @@ export const Wheel = styled.div<{ $spinning?: boolean }>`
   border-radius: 50%;
   position: relative;
   border: 4px solid ${theme.colors.primary};
-  background-color: rgba(10, 10, 30, 0.8);
+  background-color: rgba(10, 10, 30, 0.5);
   overflow: hidden;
   box-shadow: 0 0 20px ${theme.colors.primary}, inset 0 0 20px ${theme.colors.primary};
   transform-origin: center;

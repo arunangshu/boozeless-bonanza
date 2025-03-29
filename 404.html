@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script>
+    // Single Page App GitHub Pages Redirect
+    // This script handles GitHub Pages' default 404 behavior for Single Page Apps
+    // by redirecting to the index with the original path as a query parameter
+    
+    // Parse the URL
+    const path = window.location.pathname.replace(/^\/boozeless-bonanza\/?/, '/');
+    const cleanPath = path.replace(/^\//, '');
+    
+    // Redirect to the index.html with the path as a query parameter
+    const redirectUrl = window.location.origin + 
+      (window.location.hostname === 'localhost' ? '' : '/boozeless-bonanza') + 
+      '/#/' + cleanPath + 
+      window.location.search;
+    
+    window.location.replace(redirectUrl);
+  </script>
+</head>
+<body>
+  <p>Redirecting to the app...</p>
+</body>
+</html> 

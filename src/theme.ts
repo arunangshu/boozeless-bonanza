@@ -9,6 +9,7 @@ export const theme = {
     accent: '#9900ff',
     dark: '#0c0c20',
     light: '#8080ff',
+    cyan: '#00ffff',
   },
   fonts: {
     main: "'Orbitron', sans-serif",
@@ -64,6 +65,35 @@ export const GlobalStyle = createGlobalStyle`
   
   /* Cyan neon text effect */
   .neon-text-cyan {
+    text-shadow: ${theme.glowEffects.cyan};
+  }
+
+  /* Neon button classes */
+  .neon-button {
+    border-color: ${theme.colors.primary};
+    color: ${theme.colors.primary};
+    box-shadow: 0 0 10px ${theme.colors.primary};
+    text-shadow: ${theme.glowEffects.primary};
+  }
+
+  .neon-button-pink {
+    border-color: ${theme.colors.secondary};
+    color: ${theme.colors.secondary};
+    box-shadow: 0 0 10px ${theme.colors.secondary};
+    text-shadow: ${theme.glowEffects.secondary};
+  }
+
+  .neon-button-purple {
+    border-color: ${theme.colors.accent};
+    color: ${theme.colors.accent};
+    box-shadow: 0 0 10px ${theme.colors.accent};
+    text-shadow: ${theme.glowEffects.accent};
+  }
+  
+  .neon-button-cyan {
+    border-color: ${theme.colors.cyan};
+    color: ${theme.colors.cyan};
+    box-shadow: 0 0 10px ${theme.colors.cyan};
     text-shadow: ${theme.glowEffects.cyan};
   }
 `; 

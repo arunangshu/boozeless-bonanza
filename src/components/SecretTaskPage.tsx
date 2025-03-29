@@ -61,7 +61,28 @@ const SecretTaskPage: React.FC = () => {
               duration: 0.8
             }}
           >
-            <Title>Secret Mission</Title>
+            <motion.div
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              transition={{ type: "spring", stiffness: 300, damping: 10 }}
+            >
+              <div style={{
+                fontSize: 'min(10vw, 5rem)',
+                fontWeight: 'bold',
+                marginBottom: '20px',
+                background: 'linear-gradient(to right, #00ffff, #ff00ff)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                textShadow: '0 0 20px rgba(0, 255, 255, 0.7)',
+                letterSpacing: '3px',
+                position: 'relative',
+                WebkitTextStroke: '2px rgba(0, 0, 0, 0.5)',
+                textTransform: 'uppercase',
+                animation: 'pulse 2s infinite'
+              }}>
+                SECRET MISSION
+              </div>
+            </motion.div>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -89,7 +110,17 @@ const SecretTaskPage: React.FC = () => {
             transition={{ duration: 0.5 }}
           >
             <QuestionCard style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', backdropFilter: 'blur(5px)' }}>
-              <QuestionText>Your Mission</QuestionText>
+              <div style={{
+                fontSize: '2.5rem',
+                fontWeight: 'bold',
+                marginBottom: '20px',
+                color: '#ff00ff',
+                textShadow: '0 0 15px #ff00ff, 0 0 25px #ff00ff',
+                letterSpacing: '2px',
+                textTransform: 'uppercase'
+              }}>
+                Your Mission
+              </div>
               <p style={{ 
                 fontSize: '1.4rem', 
                 padding: '15px', 
@@ -103,7 +134,17 @@ const SecretTaskPage: React.FC = () => {
               </p>
               
               <div style={{ marginTop: '30px' }}>
-                <h3 className="neon-text-cyan">Rules:</h3>
+                <div style={{
+                  fontSize: '2rem',
+                  fontWeight: 'bold',
+                  marginBottom: '20px',
+                  color: '#00ffff',
+                  textShadow: '0 0 15px #00ffff, 0 0 25px #00ffff',
+                  letterSpacing: '2px',
+                  textTransform: 'uppercase'
+                }}>
+                  Rules
+                </div>
                 <ul style={{ listStyle: 'none', padding: '0', margin: '15px 0' }}>
                   {taskRules.map((rule, index) => (
                     <li 
@@ -113,6 +154,7 @@ const SecretTaskPage: React.FC = () => {
                         margin: '10px 0',
                         borderLeft: '3px solid #00ffff',
                         backgroundColor: 'rgba(0, 255, 255, 0.1)',
+                        fontSize: '1.1rem'
                       }}
                     >
                       {rule}

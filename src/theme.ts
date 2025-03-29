@@ -1,4 +1,11 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, keyframes } from 'styled-components';
+
+// Define animations
+const pulseAnimation = keyframes`
+  0% { text-shadow: 0 0 20px rgba(255, 128, 0, 0.7); }
+  50% { text-shadow: 0 0 30px rgba(255, 0, 255, 0.9), 0 0 40px rgba(0, 255, 255, 0.7); }
+  100% { text-shadow: 0 0 20px rgba(2, 216, 27, 0.7); }
+`;
 
 export const theme = {
   colors: {
@@ -95,5 +102,12 @@ export const GlobalStyle = createGlobalStyle`
     color: ${theme.colors.cyan};
     box-shadow: 0 0 10px ${theme.colors.cyan};
     text-shadow: ${theme.glowEffects.cyan};
+  }
+
+  /* Define animations */
+  @keyframes pulse {
+    0% { text-shadow: 0 0 20px rgba(0, 255, 255, 0.7); }
+    50% { text-shadow: 0 0 30px rgba(255, 0, 255, 0.9), 0 0 40px rgba(0, 255, 255, 0.7); }
+    100% { text-shadow: 0 0 20px rgba(0, 255, 255, 0.7); }
   }
 `; 
